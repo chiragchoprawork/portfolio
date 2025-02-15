@@ -111,11 +111,12 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 span.navbar-text {
     display: flex;
+    text-align: right;
     align-items: center;
 }
 .social-icon {
     display: inline-block;
-    margin-left: 14px;
+    margin-left: 0px;
 }
 .social-icon a {
     width: 42px;
@@ -297,6 +298,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
 }
 .txt-rotate > .wrap {
+  font-size: 50px;
   border-right: 0.08em solid #666;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   background-clip: text;
@@ -620,4 +622,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+.top-button-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
+  height: 100%; /* Ensure it fills the column */
+}
+
+.skill-container {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.skill-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #000;
+  padding: 20px;
+  min-height: 100vh;
+  gap: 20px; /* Adds spacing without using excessive margins */
+  overflow: hidden; 
 }

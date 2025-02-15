@@ -6,6 +6,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -56,11 +57,15 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Chirag Chopra`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineer!", "AI Engineer!", "Data Wizard!" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
+                <span className="tagline">Welcome to my Portfolio!</span>
+                <h1>{`Hi! I'm Chirag Chopra`}</h1>
+                <h2> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineer!", "AI Engineer!", "Data Wizard!" ]'><span className="wrap">{text}</span></span></h2>
+                  <p>Looking for a Senior Software Engineer and AI expert who can transform your tech vision into reality? With a dynamic blend of advanced frontend and backend skills, I specialize in building high-performance systems and seamless user experiences. From crafting interactive interfaces with React, Angular, and Next.js to architecting scalable, robust backend solutions using Java, Spring Boot, Django, and microservices, I ensure every project is built to perform. My cloud expertise with AWS, GCP, and Azure empowers me to design efficient, real-time data pipelines, while tools like Apache Kafka, Apache Spark, and Airflow allow me to automate and optimize complex workflows. If you’re looking for someone to integrate cutting-edge machine learning models and deliver AI-driven solutions that are future-ready, I’m here to help you take your technology to the next level!</p>
+                  <button onClick={() => window.location.href = 'http://localhost:3000/#connect'}>
+                    Let’s Connect <ArrowRightCircle size={25} />
+                  </button>
+              </div>
+              }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
