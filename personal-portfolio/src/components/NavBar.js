@@ -9,7 +9,20 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 
-export const NavBar = () => {
+export const NavBar = ({ setActiveTab }) => {
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+    if (value === "projects") {
+      setActiveTab("first"); 
+    }
+    if (value === "resume") {
+      setActiveTab("second"); 
+    }
+    if (value === "contact") {
+        setActiveTab("third");   
+      }
+      
+    }
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -28,9 +41,9 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  }
+  // const onUpdateActiveLink = (value) => {
+  //   setActiveLink(value);
+  // }
 
   return (
     <Router>
@@ -47,6 +60,13 @@ export const NavBar = () => {
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#skill" className={activeLink === 'skill' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skill')}>Skills</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#resume" className={activeLink === 'resume' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
+              <Nav.Link
+                href="#contact"
+                onClick={() => onUpdateActiveLink("contact")}
+                className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}>
+                Contact Me
+              </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -54,13 +74,14 @@ export const NavBar = () => {
                 <a href="https://github.com/chiragchoprawork"><img src={githubMark} alt="" /></a>
                 <a href="https://scholar.google.com/citations?user=Wju-SIgAAAAJ&hl=en"><img src={googlescholar} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
+              {/* <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
+              </HashLink> */}
+             
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Router>
   )
-}
+};

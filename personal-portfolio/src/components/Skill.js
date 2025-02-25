@@ -22,7 +22,9 @@ export const Skill = () => {
     ];
   
     return (
-
+      
+      <section className="skill" id="skill"> 
+     
       <div className="skills-wrapper">
         {skills.map((skill, index) => (
           <SkillComponent
@@ -32,5 +34,6 @@ export const Skill = () => {
           />
         ))}
       </div>
+      </section>
     );
   };
