@@ -15,8 +15,8 @@ export const Skill = () => {
         { name: "Node.js", image: nodejsImage },
       {name:"Django",image:djangoImage},
       { name: "Python", image: pythonImage },
-      {name:"TypeScript", image:tsImage},
-      {name:"Docker",image:dockerImage},
+      // {name:"TypeScript", image:tsImage},
+      // {name:"Docker",image:dockerImage},
     //   {name:"Test",image:dockerImage},
 
     ];

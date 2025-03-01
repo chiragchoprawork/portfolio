@@ -658,9 +658,52 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #000;
+  background-color: black; /* or a different color if needed */
   padding: 20px;
-  min-height: 100vh;
-  gap: 20px; /* Adds spacing without using excessive margins */
-  overflow: hidden; 
+  min-height: auto; /* Remove the full viewport height */
+  gap: 20px; 
+  overflow: hidden;
+}
+
+
+/* Style for individual skill items */
+.skill-sec {
+  background: transparent;
+  border: 2px solid #ffffff; /* Increase thickness and ensure full white for contrast */
+  border-radius: 20px;
+  margin: 6px 8px;
+  display: inline-block;
+  padding: 6px;
+  transition: background 0.4s ease-in, border-color 0.4s ease-in;
+}
+
+/* Optionally, on hover, you can change the border color to make it more interactive */
+.skill-sec:hover {
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  border-color: #ffffff;
+}
+
+
+
+/* Reduce spacing for the skills box */
+.skill-bx {
+  padding: 40px 30px;    /* Decrease the padding to bring content closer */
+  margin-top: 0px;     /* Reduce negative margin if needed */
+}
+
+/* Adjust spacing in paragraphs and rows inside the Skills container */
+.skill-bx p {
+  margin-bottom: 40px;   /* Decrease bottom margin for paragraphs */
+}
+
+.skill-row {
+  margin-bottom: 20px;   /* Reduce the gap between rows */
+}
+
+/* Enhance and bold the section headings */
+.skill h2 {
+  font-weight: 800;      /* Increase boldness */
+  color: #fff;           /* Ensure high contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for extra pop */
+  margin-bottom: 30px;   /* Adjust spacing below the heading */
 }

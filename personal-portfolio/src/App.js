@@ -17,13 +17,13 @@ function App() {
       {/* <NavBar /> */}
       <NavBar setActiveTab={setActiveTab} />
       <Banner setActiveTab={setActiveTab} />
-      {/* <Skills /> */}
+      <Skills />
       <Skill />
       {/* <Projects /> */}
       <Projects activeTab={activeTab} setActiveTab={setActiveTab} />  
       {/* <Contact /> */}
       <Footer />
-      
+     
       
      
    </div>
